@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ShortenUrlRequest;
 use App\Models\UrlShortener;
-use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class UrlShortenerController extends Controller
 {
@@ -17,7 +17,9 @@ class UrlShortenerController extends Controller
         $existingUrlShortener = UrlShortener::where('url', $validatedData['url'])->first();
 
         if ($existingUrlShortener) {
-            return Redirect::route('index')->with('success', $existingUrlShortener->short_url);
+            return Inertia::render('Index', [
+                'success' => 'Short URL is - '.$existingUrlShortener->short_url,
+            ]);
         }
 
         // URL doesn't exist, create a new entry
@@ -25,6 +27,9 @@ class UrlShortenerController extends Controller
             'url' => $validatedData['url'],
             'short_url' => 'temp.com/1233',
         ]);
-        return Redirect::route('index')->with('success', $newUrlShortener->short_url);
+
+        return Inertia::render('Index', [
+            'success' => 'Short URL is - '.$newUrlShortener->short_url,
+        ]);
     }
 }

@@ -15,7 +15,6 @@ export default function Index({ auth, laravelVersion, phpVersion, success }) {
                     <div className="flex justify-center">
                         <h2 className="mt-2 text-xl font-semibold text-gray-900 dark:text-white"><a href="#">URL Shortener</a></h2>
                     </div>
-
                     <div className="">
                         <div>
                             <div className="text-gray-900 dark:text-white mt-2">
@@ -32,7 +31,7 @@ export default function Index({ auth, laravelVersion, phpVersion, success }) {
                                     <a href="url-click-counter.php" className="text-blue-500 underline"> how many clicks it received</a>.
                                 </p>
                             </div>
-                            {success && <div className="bg-emerald-500 py-2 px-4 text-white rounded mb-4">testr</div>}
+                            {success && (<div className="bg-emerald-500 py-2 px-4 text-white rounded mb-4">{success}</div>)}
                             <div className="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg">
                                 <URLShortener/>
                             </div>
