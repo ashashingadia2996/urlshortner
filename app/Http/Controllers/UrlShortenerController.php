@@ -20,7 +20,7 @@ class UrlShortenerController extends Controller
         if ($existingUrlShortener) {
             return Inertia::render('Shorten', [
                 'longurl' => $existingUrlShortener->url,
-                'shorturl' => $request->root().'/short/'.$existingUrlShortener->short_url
+                'shorturl' => $request->root().'/shorturl/'.$existingUrlShortener->short_url
             ]);
         }
 
@@ -32,7 +32,7 @@ class UrlShortenerController extends Controller
 
         return Inertia::render('Shorten', [
             'longurl' => $validatedData['url'],
-            'shorturl' => $request->root().'/short/'.$newUrlShortener->short_url
+            'shorturl' => $request->root().'/shorturl/'.$newUrlShortener->short_url
         ]);
     }
 
