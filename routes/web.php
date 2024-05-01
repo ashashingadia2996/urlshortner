@@ -26,6 +26,10 @@ Route::get('/', function () {
     ]);
 })->name('index');
 Route::post('/shorten', [UrlShortenerController::class, 'shorten'])->name('shorten');
+Route::get('/shorten', function () {
+    return Inertia::render('Shorten', []);
+});
+Route::get('shorturl/{code}', [UrlShortenerController::class, 'redirect'])->name('redirect');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
