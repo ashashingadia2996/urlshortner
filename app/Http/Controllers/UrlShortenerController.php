@@ -45,6 +45,8 @@ class UrlShortenerController extends Controller
         $shortURL = UrlShortener::where('short_url', $code)->first();
 
         if ($shortURL) {
+            $shortURL->increment('click_count');
+
             // Redirect to the original URL
             return redirect($shortURL->url);
         } else {
@@ -52,4 +54,5 @@ class UrlShortenerController extends Controller
             abort(404, 'Shortened URL not found.');
         }
     }
+
 }

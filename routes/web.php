@@ -26,9 +26,11 @@ Route::get('/', function () {
     ]);
 })->name('index');
 Route::post('/shorten', [UrlShortenerController::class, 'shorten'])->name('shorten');
-Route::get('/shorten', function () {
-    return Inertia::render('Shorten', []);
-});
+
+//Route::get('/totalclicks/{code}', function () {
+//    return Inertia::render('TotalClicks', []);
+//})->name('totalclicks');
+
 Route::get('shorturl/{code}', [UrlShortenerController::class, 'redirect'])->name('redirect');
 
 Route::get('/dashboard', function () {
@@ -39,6 +41,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+// Fallback route to catch all other requests
+Route::fallback(function () {
+    return redirect('/');
 });
 
 require __DIR__.'/auth.php';

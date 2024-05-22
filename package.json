@@ -22,6 +22,9 @@
     "dependencies": {
         "@inertiajs/inertia": "^0.11.1",
         "clipboard": "^2.0.11",
-        "react-toastify": "^10.0.5"
+        "react-router-dom": "^6.23.1",
+        "react-share": "^5.1.0",
+        "react-toastify": "^10.0.5",
+        "ziggy-js": "^2.1.0"
     }
 }

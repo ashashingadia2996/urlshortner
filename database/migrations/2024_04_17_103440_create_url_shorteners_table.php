@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->text('url');
             $table->string('short_url');
+            $table->unsignedBigInteger('click_count')->default(0);
             $table->timestamps();
         });
     }
