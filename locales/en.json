@@ -1,0 +1,39 @@
+{
+  "languages": {
+    "pt": "Portuguese",
+    "en": "English",
+    "fr": "French"
+  },
+  "data": {
+    "LBL_URLShortener": "URL Shortener",
+    "DESC_URLShortener_1": "URL Shortener allows to shorten long links from",
+    "DESC_URLShortener_2": "blogs and sites. Just paste the long URL and click the Shorten URL button. On the next page, copy the shortened URL and share it on sites, chat and emails. After shortening the URL, check ",
+    "DESC_URLShortener_3": "how many clicks it received",
+    "LBL_PASTEURL": "Paste the URL to be shortened",
+    "BTN_SHORTENURL": "Shorten URL",
+    "DESC_URLShortener_4" : "A URL shortener tool condenses long web addresses into shorter, more manageable links. These abbreviated URLs are easier to share, especially on platforms with character limits like Twitter, and they often provide analytics to track clicks and engagement.",
+    "LBL_BENEFITS" : "Shorten, share and track",
+    "DESC_BENEFITS" : "Your shortened URLs can be used in publications, documents, advertisements, blogs, forums, instant messages, and other locations. Track statistics for your business and projects by monitoring the number of hits from your URL with our click counter.",
+    "LBL_EASY": "Easy",
+    "DESC_EASY": "ShortURL is easy and fast, enter the long link to get your shortened link",
+    "LBL_SHORTENED": "Shortened",
+    "DESC_SHORTENED": "Use any link, no matter what size, ShortURL always shortens",
+    "LBL_SECURE": "Secure",
+    "DESC_SECURE": "It is fast and secure, our service has HTTPS protocol and data encryption",
+    "LBL_STATS": "Statistics",
+    "DESC_STATS": "Check the number of clicks that your shortened URL received",
+    "LBL_RELIABLE": "Reliable",
+    "DESC_RELIABLE": "All links that try to disseminate spam, viruses and malware are deleted",
+    "LBL_DEVICES": "Devices",
+    "DESC_DEVICES": "Compatible with smartphones, tablets and desktop"
+  },
+  "social_services" : {
+    "LBL_FACEBOOK" : "Facebook",
+    "LBL_TWITTER" : "Twitter",
+    "LBL_INSTAGRAM" : "Instagram",
+    "LBL_YOUTUBE" : "YouTube",
+    "LBL_LINKEDIN" : "Linked In",
+    "LBL_WHATSAPP" : "WhatsApp",
+    "LBL_TIKTOK" : "TikTok"
+  }
+}

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import {useForm } from "@inertiajs/react";
 import InputError from "./InputError";
-
+import { useTranslation } from 'react-i18next';
 const URLShortener = () => {
+    const { t, i18n } = useTranslation();
     const { data, setData, post, errors, reset } = useForm({
         url: "",
     });
@@ -16,7 +17,7 @@ const URLShortener = () => {
 
     return (
         <div className="pb-10">
-            <h1 className="text-2xl pb-5 font-semibold text-gray-900 dark:text-white flex justify-center">Paste the URL to be shortened</h1>
+            <h1 className="text-2xl pb-5 font-semibold text-gray-900 dark:text-white flex justify-center">{t('data.LBL_PASTEURL')}</h1>
             <form onSubmit={handleSubmit}>
                 <div className="flex items-center">
                     <input type="text"
@@ -24,11 +25,11 @@ const URLShortener = () => {
                            name="url"
                            onChange={(e) => setData("url", e.target.value)}
                            className="flex-1 px-4 py-2 border border-gray-300"/>
-                        <button type="submit" className="px-4 py-2.5 bg-blue-500 text-white">Shorten URL</button>
+                        <button type="submit" className="px-4 py-2.5 bg-blue-500 text-white">{t('data.BTN_SHORTENURL')}</button>
                 </div>
                 <InputError message={errors.url} className="mt-2" />
             </form>
-            <p className="text-sm-center pt-5 font-semibold text-gray-900 dark:text-white flex justify-center">A URL shortener tool condenses long web addresses into shorter, more manageable links. These abbreviated URLs are easier to share, especially on platforms with character limits like Twitter, and they often provide analytics to track clicks and engagement.</p>
+            <p className="text-sm-center pt-5 font-semibold text-gray-900 dark:text-white flex justify-center">{t('data.DESC_URLShortener_4')}</p>
         </div>
     );
 };

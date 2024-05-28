@@ -1,0 +1,40 @@
+{
+  "languages": {
+    "pt": "Português",
+    "en": "Inglês",
+    "fr": "Francês"
+  },
+  "data": {
+    "LBL_URLShortener": "Encurtador de URL",
+    "DESC_URLShortener_1": "URL Shortener permite encurtar links longos de",
+    "DESC_URLShortener_2": "blogs e sites. Basta colar o URL longo e clicar no botão Encurtar URL. Na próxima página, copie o URL abreviado e compartilhe-o em sites, chat e e-mails. Depois de encurtar o URL, verifique ",
+    "DESC_URLShortener_3": "quantos cliques recebeu",
+    "LBL_PASTEURL": "Cole o URL a ser encurtado",
+    "BTN_SHORTENURL": "Encurtar URL",
+    "DESC_URLShortener_4" : "Uma ferramenta de encurtamento de URL condensa endereços da web longos em links mais curtos e mais gerenciáveis. Esses URLs abreviados são mais fáceis de compartilhar, especialmente em plataformas com limites de caracteres como o Twitter, e geralmente fornecem análises para rastrear cliques e engajamento.",
+    "LBL_BENEFITS" : "Encurte, compartilhe e rastreie",
+    "DESC_BENEFITS" : "Seus URLs abreviados podem ser usados \u200B\u200Bem publicações, documentos, anúncios, blogs, fóruns, mensagens instantâneas e outros locais. Acompanhe as estatísticas do seu negócio e projetos monitorando o número de acessos da sua URL com nosso contador de cliques.",
+    "DESC_BENEFITS": "Seus URLs encurtados podem ser usados em publicações, documentos, anúncios, blogs, fóruns, mensagens instantâneas e outros locais. Acompanhe as estatísticas para o seu negócio e projetos monitorando o número de acessos ao seu URL com nosso contador de cliques.",
+    "LBL_EASY": "Fácil",
+    "DESC_EASY": "O ShortURL é fácil e rápido, insira o link longo para obter seu link encurtado",
+    "LBL_SHORTENED": "Encurtado",
+    "DESC_SHORTENED": "Use qualquer link, não importa o tamanho, o ShortURL sempre encurta",
+    "LBL_SECURE": "Seguro",
+    "DESC_SECURE": "É rápido e seguro, nosso serviço possui protocolo HTTPS e criptografia de dados",
+    "LBL_STATS": "Estatísticas",
+    "DESC_STATS": "Verifique o número de cliques que seu URL encurtado recebeu",
+    "LBL_RELIABLE": "Confiável",
+    "DESC_RELIABLE": "Todos os links que tentam disseminar spam, vírus e malware são excluídos",
+    "LBL_DEVICES": "Dispositivos",
+    "DESC_DEVICES": "Compatível com smartphones, tablets e desktop"
+  },
+  "social_services" : {
+    "LBL_FACEBOOK" : "Facebook",
+    "LBL_TWITTER" : "Twitter",
+    "LBL_INSTAGRAM" : "Instagram",
+    "LBL_YOUTUBE" : "YouTube",
+    "LBL_LINKEDIN" : "Linked In",
+    "LBL_WHATSAPP" : "WhatsApp",
+    "LBL_TIKTOK" : "TikTok"
+  }
+}

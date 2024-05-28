@@ -1,16 +1,14 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBarChart, faBookmark, faSquareCheck, faStar, faThumbsUp} from "@fortawesome/free-regular-svg-icons";
 import {faLaptop} from "@fortawesome/free-solid-svg-icons";
-
+import { useTranslation } from 'react-i18next';
 const URLShortnerBenefits = () => {
+    const { t, i18n } = useTranslation();
     return (
         <>
             <div className="text-gray-900 dark:text-white mt-10">
-                <h2 className="text-2xl font-bold mb-4">Shorten, share and track</h2>
-                <p className="mb-6">Your shortened URLs can be used in publications, documents,
-                    advertisements, blogs, forums, instant messages, and other locations. Track statistics
-                    for your business and projects by monitoring the number of hits from your URL with our
-                    click counter.
+                <h2 className="text-2xl font-bold mb-4">{t('data.LBL_BENEFITS')}</h2>
+                <p className="mb-6">{t('data.DESC_BENEFITS')}
                 </p>
             </div>
             <div id="row" className="flex justify-center text-gray-900 dark:text-white mt-10">
@@ -18,8 +16,8 @@ const URLShortnerBenefits = () => {
                     <div className="icon flex items-center justify-center mb-2">
                         <FontAwesomeIcon icon={faThumbsUp} />
                     </div>
-                    <h3 className="text-center text-lg font-semibold mb-2">Easy</h3>
-                    <p className="text-center">ShortURL is easy and fast, enter the long link to get your shortened link</p>
+                    <h3 className="text-center text-lg font-semibold mb-2">{t('data.LBL_EASY')}</h3>
+                    <p className="text-center">{t('data.DESC_EASY')}</p>
                 </div>
                 <div id="column" className="col-4 text-center">
                     <div className="icon flex items-center justify-center mb-2">
@@ -27,18 +25,16 @@ const URLShortnerBenefits = () => {
 
 
                     </div>
-                    <h3 className="text-center text-lg font-semibold mb-2">Shortened</h3>
-                    <p className="text-center">Use any link, no matter what size, ShortURL always
-                        shortens</p>
+                    <h3 className="text-center text-lg font-semibold mb-2">{t('data.LBL_SHORTENED')}</h3>
+                    <p className="text-center">{t('data.DESC_SHORTENED')}</p>
                 </div>
                 <div id="column" className="col-4 text-center">
                     <div className="icon flex items-center justify-center mb-2">
                         <FontAwesomeIcon icon={faStar} />
 
                     </div>
-                    <h3 className="text-center text-lg font-semibold mb-2">Secure</h3>
-                    <p className="text-center">It is fast and secure, our service has HTTPS protocol and
-                        data encryption</p>
+                    <h3 className="text-center text-lg font-semibold mb-2">{t('data.LBL_SECURE')}</h3>
+                    <p className="text-center">{t('data.DESC_SECURE')}</p>
                 </div>
             </div>
             <div id="row" className="flex justify-center text-gray-900 dark:text-white mt-10">
@@ -46,24 +42,22 @@ const URLShortnerBenefits = () => {
                     <div className="icon flex items-center justify-center mb-2">
                         <FontAwesomeIcon icon={faBarChart} />
                     </div>
-                    <h3 className="text-center text-lg font-semibold mb-2">Statistics</h3>
-                    <p className="text-center">Check the number of clicks that your shortened URL
-                        received</p>
+                    <h3 className="text-center text-lg font-semibold mb-2">{t('data.LBL_STATS')}</h3>
+                    <p className="text-center">{t('data.DESC_STATS')}</p>
                 </div>
                 <div id="column" className="col-4 text-center">
                     <div className="icon flex items-center justify-center mb-2">
                         <FontAwesomeIcon icon={faBookmark} />
                     </div>
-                    <h3 className="text-center text-lg font-semibold mb-2">Reliable</h3>
-                    <p className="text-center">All links that try to disseminate spam, viruses and
-                        malware are deleted</p>
+                    <h3 className="text-center text-lg font-semibold mb-2">{t('data.LBL_RELIABLE')}</h3>
+                    <p className="text-center">{t('data.DESC_RELIABLE')}</p>
                 </div>
                 <div id="column" className="col-4 text-center">
                     <div className="icon flex items-center justify-center mb-2">
                         <FontAwesomeIcon icon={faLaptop} />
                     </div>
-                    <h3 className="text-center text-lg font-semibold mb-2">Devices</h3>
-                    <p className="text-center">Compatible with smartphones, tablets and desktop</p>
+                    <h3 className="text-center text-lg font-semibold mb-2">{t('data.LBL_DEVICES')}</h3>
+                    <p className="text-center">{t('data.DESC_DEVICES')}</p>
                 </div>
             </div>
         </>

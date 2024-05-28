@@ -1,0 +1,39 @@
+{
+  "languages": {
+    "pt": "Portugais",
+    "en": "Anglais",
+    "fr": "Français"
+  },
+  "data": {
+    "LBL_URLShortener": "Raccourcisseur d'URL",
+    "DESC_URLShortener_1": "Le raccourcisseur d'URL permet de raccourcir les longs liens de",
+    "DESC_URLShortener_2": "blogs et sites. Il suffit de coller l'URL longue et de cliquer sur le bouton Raccourcir l'URL. Sur la page suivante, copiez l'URL raccourcie et partagez-la sur des sites, des chats et des e-mails. Après avoir raccourci l'URL, vérifiez ",
+    "DESC_URLShortener_3": "combien de clics elle a reçu",
+    "LBL_PASTEURL": "Collez l'URL à raccourcir",
+    "BTN_SHORTENURL": "Raccourcir l'URL",
+    "DESC_URLShortener_4" : "Un outil de raccourcissement d'URL condense les longues adresses web en liens plus courts et plus gérables. Ces URL abrégées sont plus faciles à partager, notamment sur les plateformes avec des limites de caractères comme Twitter, et elles fournissent souvent des analyses pour suivre les clics et l'engagement.",
+    "LBL_BENEFITS" : "Raccourcir, partager et suivre",
+    "DESC_BENEFITS" : "Vos URLs raccourcies peuvent être utilisées dans des publications, documents, publicités, blogs, forums, messages instantanés et autres endroits. Suivez les statistiques pour votre entreprise et vos projets en surveillant le nombre de visites de votre URL avec notre compteur de clics.",
+    "LBL_EASY": "Facile",
+    "DESC_EASY": "ShortURL est facile et rapide, entrez le lien long pour obtenir votre lien raccourci",
+    "LBL_SHORTENED": "Raccourci",
+    "DESC_SHORTENED": "Utilisez n'importe quel lien, peu importe la taille, ShortURL le raccourcit toujours",
+    "LBL_SECURE": "Sécurisé",
+    "DESC_SECURE": "C'est rapide et sécurisé, notre service dispose du protocole HTTPS et du chiffrement des données",
+    "LBL_STATS": "Statistiques",
+    "DESC_STATS": "Vérifiez le nombre de clics que votre URL raccourcie a reçu",
+    "LBL_RELIABLE": "Fiable",
+    "DESC_RELIABLE": "Tous les liens qui tentent de diffuser du spam, des virus et des malwares sont supprimés",
+    "LBL_DEVICES": "Appareils",
+    "DESC_DEVICES": "Compatible avec les smartphones, tablettes et ordinateurs de bureau"
+  },
+  "social_services" : {
+    "LBL_FACEBOOK" : "Facebook",
+    "LBL_TWITTER" : "Twitter",
+    "LBL_INSTAGRAM" : "Instagram",
+    "LBL_YOUTUBE" : "YouTube",
+    "LBL_LINKEDIN" : "LinkedIn",
+    "LBL_WHATSAPP" : "WhatsApp",
+    "LBL_TIKTOK" : "TikTok"
+  }
+}

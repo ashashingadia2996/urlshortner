@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\LanguageController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -44,6 +45,7 @@ Route::get('trackclick', function () {
     return Inertia::render('TrackClicks', []);
 })->name('trackclick');
 
+Route::post('language', [LanguageController::class, 'store'])->name('language');
 
 Route::get('shorturl/{code}', [UrlShortenerController::class, 'redirect'])->name('redirect');
 
