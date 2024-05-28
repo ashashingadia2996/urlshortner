@@ -20,7 +20,7 @@ const URLCountTracker = () => {
     };
 
     return (
-        <div className="pb-10">
+        <div className="pb-5">
             <h1 className="text-2xl pb-5 font-semibold text-gray-900 dark:text-white flex justify-center">Enter the URL to track how many clicks it received.</h1>
             <form onSubmit={handleSubmit}>
                 <div className="flex items-center">
