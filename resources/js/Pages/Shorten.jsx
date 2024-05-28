@@ -5,6 +5,7 @@ import ToastNotification from '../Components/ToastNotification';
 import {toast} from 'react-toastify';
 import SocialShareIcons from '../Components/SocialShareIcons';
 import {useForm } from "@inertiajs/react";
+import RedirectToIndexBtn from "../Components/RedirectToIndexBtn";
 
 
 export default function Shorten({auth, longurl, shorturl, shortcode}) {
@@ -83,10 +84,7 @@ export default function Shorten({auth, longurl, shorturl, shortcode}) {
                                     </button>
                                 </div>
                                 <div className="mr-2">
-                                    <button type="button"
-                                            className="px-4 py-2.5 bg-blue-500 text-white"
-                                            onClick={(e) => redirectToURLShortner()}>Shorten another URL
-                                    </button>
+                                    <RedirectToIndexBtn btnText="Shorten Another URL"/>
                                 </div>
                             </div>
                         </div>

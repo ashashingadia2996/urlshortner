@@ -2,14 +2,13 @@ import {Head} from "@inertiajs/react";
 import React from 'react';
 import {useForm} from "@inertiajs/react";
 import SocialShareIcons from '../Components/SocialShareIcons';
+import RedirectToIndexBtn from '../Components/RedirectToIndexBtn';
 
 export default function TotalClicks({auth, shortcode, totalcount, requestUrl}) {
     const baseUrl = new URL(requestUrl).origin;
     const shorturl = baseUrl + '/shorturl/' + shortcode;
     const {get} = useForm({});
-    const redirectToURLShortner = () => {
-        get(route('index'));
-    }
+
 
     const redirectTrackUrl = () => {
         get(route('trackclick'));
@@ -57,11 +56,7 @@ export default function TotalClicks({auth, shortcode, totalcount, requestUrl}) {
                                     </button>
                                 </div>
                                 <div className="mr-2">
-                                    <button type="button"
-                                            className="px-4 py-2.5 bg-blue-500 text-white"
-                                            onClick={(e) => redirectToURLShortner()}
-                                    >Shorten another URL
-                                    </button>
+                                    <RedirectToIndexBtn btnText="Shorten Another URL"/>
                                 </div>
                             </div>
                         </div>

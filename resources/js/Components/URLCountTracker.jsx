@@ -33,7 +33,6 @@ const URLCountTracker = () => {
                 </div>
                 <InputError message={errors.url} className="mt-2" />
             </form>
-            <p className="text-sm-center pt-5 font-semibold text-gray-900 dark:text-white flex justify-center">A URL shortener tool condenses long web addresses into shorter, more manageable links. These abbreviated URLs are easier to share, especially on platforms with character limits like Twitter, and they often provide analytics to track clicks and engagement.</p>
         </div>
     );
 };
