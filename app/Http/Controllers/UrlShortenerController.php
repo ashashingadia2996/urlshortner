@@ -60,8 +60,10 @@ class UrlShortenerController extends Controller
     public function getClickCount($code) {
 
         $existingUrlShortener = UrlShortener::where('short_url', $code)->first();
-        $totalCount = $existingUrlShortener->click_count;
-
+        $totalCount = 0;
+        if($existingUrlShortener) {
+            $totalCount = $existingUrlShortener->click_count;
+        }
         return $totalCount;
     }
 

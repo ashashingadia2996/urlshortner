@@ -6,6 +6,7 @@ import {toast} from 'react-toastify';
 import SocialShareIcons from '../Components/SocialShareIcons';
 import {useForm } from "@inertiajs/react";
 
+
 export default function Shorten({auth, longurl, shorturl, shortcode}) {
     const buttonRef = useRef(null);
     const { get } = useForm({});

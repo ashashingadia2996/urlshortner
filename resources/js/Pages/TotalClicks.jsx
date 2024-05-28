@@ -1,11 +1,12 @@
 import {Head} from "@inertiajs/react";
 import React from 'react';
-import {useForm } from "@inertiajs/react";
+import {useForm} from "@inertiajs/react";
+import SocialShareIcons from '../Components/SocialShareIcons';
 
 export default function TotalClicks({auth, shortcode, totalcount, requestUrl}) {
     const baseUrl = new URL(requestUrl).origin;
-    const shorturl = baseUrl + '/shorturl/'+shortcode;
-    const { get } = useForm({});
+    const shorturl = baseUrl + '/shorturl/' + shortcode;
+    const {get} = useForm({});
     const redirectToURLShortner = () => {
         get(route('index'));
     }
@@ -22,12 +23,14 @@ export default function TotalClicks({auth, shortcode, totalcount, requestUrl}) {
                 className="relative sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
                 <div className="max-w-3xl mx-auto p-6 lg:p-8">
                     <div className="flex justify-center">
-                        <h2 className="mt-2 text-xl font-semibold text-gray-900 dark:text-white"><a href="#">Total URL Clicks</a></h2>
+                        <h2 className="mt-2 text-xl font-semibold text-gray-900 dark:text-white"><a href="#">Total URL
+                            Clicks</a></h2>
                     </div>
                     <div className="mb-3">
                         <div>
                             <div className="text-gray-900 dark:text-white mt-2">
-                                <p>The number of clicks from the shortened URL that redirected the user to the destination page.</p>
+                                <p>The number of clicks from the shortened URL that redirected the user to the
+                                    destination page.</p>
                             </div>
                         </div>
                     </div>
@@ -36,7 +39,8 @@ export default function TotalClicks({auth, shortcode, totalcount, requestUrl}) {
                         <div className="pb-10">
                             <div className="flex items-center justify-between mt-5">
                                 <div>
-                                    Short URL: <a href={shorturl} target="_blank" className="text-blue-500">{shorturl}</a>
+                                    Short URL: <a href={shorturl} target="_blank"
+                                                  className="text-blue-500">{shorturl}</a>
                                 </div>
                                 <div className="flex justify-center items-center w-full">
                                     <div className="text-6xl font-semibold">
@@ -62,6 +66,7 @@ export default function TotalClicks({auth, shortcode, totalcount, requestUrl}) {
                             </div>
                         </div>
                     </div>
+                    <SocialShareIcons/>
                 </div>
             </div>
 
