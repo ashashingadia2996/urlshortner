@@ -20,7 +20,8 @@ class UrlShortenerController extends Controller
         if ($existingUrlShortener) {
             return Inertia::render('Shorten', [
                 'longurl' => $existingUrlShortener->url,
-                'shorturl' => $request->root().'/shorturl/'.$existingUrlShortener->short_url
+                'shorturl' => $request->root().'/shorturl/'.$existingUrlShortener->short_url,
+                'shortcode' => $existingUrlShortener->short_url
             ]);
         }
 
@@ -32,7 +33,8 @@ class UrlShortenerController extends Controller
 
         return Inertia::render('Shorten', [
             'longurl' => $validatedData['url'],
-            'shorturl' => $request->root().'/shorturl/'.$newUrlShortener->short_url
+            'shorturl' => $request->root().'/shorturl/'.$newUrlShortener->short_url,
+            'shortcode' => $newUrlShortener->short_url
         ]);
     }
 
@@ -53,6 +55,14 @@ class UrlShortenerController extends Controller
             // If not found, return a 404 response or custom error page
             abort(404, 'Shortened URL not found.');
         }
+    }
+
+    public function getClickCount($code) {
+
+        $existingUrlShortener = UrlShortener::where('short_url', $code)->first();
+        $totalCount = $existingUrlShortener->click_count;
+
+        return $totalCount;
     }
 
 }

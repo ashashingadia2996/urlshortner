@@ -5,6 +5,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\UrlShortenerController;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,11 +26,24 @@ Route::get('/', function () {
         'phpVersion' => PHP_VERSION,
     ]);
 })->name('index');
+
 Route::post('/shorten', [UrlShortenerController::class, 'shorten'])->name('shorten');
 
-//Route::get('/totalclicks/{code}', function () {
-//    return Inertia::render('TotalClicks', []);
-//})->name('totalclicks');
+Route::get('totalclicks/{code}', function (Request $request, $code) {
+    $controller = new UrlShortenerController();
+    $totalCount = $controller->getClickCount($code);
+
+    return Inertia::render('TotalClicks', [
+        'shortcode' => $code,
+        'totalcount' => $totalCount,
+        'requestUrl' => $request->url(),
+    ]);
+})->name('totalclicks');
+
+Route::get('trackclick', function () {
+    return Inertia::render('TrackClicks', []);
+})->name('trackclick');
+
 
 Route::get('shorturl/{code}', [UrlShortenerController::class, 'redirect'])->name('redirect');
 

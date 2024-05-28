@@ -26,14 +26,12 @@ export default function Shorten({auth, longurl, shorturl, shortcode}) {
     }, []);
 
     const redirectToURLShortner = () => {
-        window.location.href = route('index');
+        get(route('index'));
     }
 
     const redirectToTotalClicks = (shortcode) => {
-        // console.log(shorturl);
         const url = route('totalclicks', { code: shortcode });
-        // get(route('totalclicks/'+shortcode));
-
+        get(url);
     }
 
     return (
@@ -64,6 +62,7 @@ export default function Shorten({auth, longurl, shorturl, shortcode}) {
                                            id="shortenurl"
                                            name="url"
                                            value={shorturl}
+                                           readOnly
                                            className="flex-1 px-4 py-2 border border-gray-300"/>
                                     <button type="button" ref={buttonRef} data-clipboard-target="#shortenurl"
                                             data-clipboard-target="#shortenurl"
@@ -73,7 +72,7 @@ export default function Shorten({auth, longurl, shorturl, shortcode}) {
                                 </div>
                             </form>
                             <div className="mt-5">
-                                Long URL: <a href={longurl} target='_blank'>{longurl}</a>
+                                Long URL: <a href={longurl} target='_blank' className="text-blue-500">{longurl}</a>
                             </div>
                             <div className="mt-5 flex">
                                 <div className="mr-2">
